@@ -1,0 +1,11 @@
+output: hw1_New.o hw1_Function_New.o
+	g++ hw1_New.o hw1_Function_New.o -o output
+
+hw1_New.o: hw1_New.cpp
+	g++ -c hw1_New.cpp
+	
+hw1_Function_New.o: hw1_Function_New.cpp hw1.hw1
+	g++ -c hw1_Function_New.cpp
+	
+clean:
+	rm *.o output
